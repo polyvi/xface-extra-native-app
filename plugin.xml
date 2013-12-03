@@ -1,0 +1,26 @@
+ <?xml version="1.0" encoding="UTF-8"?>
+
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+        id="com.polyvi.xface.lib.plugin.native-app"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        version="1.0.0">
+
+    <name>Native App</name>
+    <author>PolyVi Inc.</author>
+    <description>xFace Native App Plugin</description>
+    <license>GPLv3</license>
+    <keywords>xface,native,app</keywords>
+
+    <!-- ios -->
+    <platform name="ios">
+        <header-file src="src/ios/XNativeApplication_Privates.h" />
+        <header-file src="src/ios/XNativeApplication.h" />
+        <source-file src="src/ios/XNativeApplication.m" />
+        <header-file src="src/ios/XStoreProductPresenter.h" />
+        <source-file src="src/ios/XStoreProductPresenter.m" />
+        <source-file src="src/ios/XApplicationFactory+XNativeApp.m" />
+
+        <framework src="StoreKit.framework" />
+    </platform>
+
+</plugin>
