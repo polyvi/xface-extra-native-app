@@ -1,4 +1,4 @@
-REPOSITORY = 'git@git.polyvi.com:xface-lib-plugin-native-app.git'
+REPOSITORY = 'git@git.polyvi.com:xface-extra-native-app.git'
 REVIEWBOARD_URL = 'http://review.polyvi.com/reviews/'
 GUESS_FIELDS = 'true'
 TARGET_GROUPS = 'xFaceApolloCCGroup'
