@@ -1,13 +1,13 @@
  <?xml version="1.0" encoding="UTF-8"?>
 
 <plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
-        id="com.polyvi.xface.lib.plugin.native-app"
+        id="com.polyvi.xface.extra.native-app"
         xmlns:android="http://schemas.android.com/apk/res/android"
         version="1.0.0">
 
     <name>Native App</name>
     <author>PolyVi Inc.</author>
-    <description>xFace Native App Plugin</description>
+    <description>xFace Native App Extra</description>
     <license>GPLv3</license>
     <keywords>xface,native,app</keywords>
 
