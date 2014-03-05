@@ -55,7 +55,7 @@ static XStoreProductPresenter *sStoreProductPresenterInstance;
         NSString *appleId = [appInfo appleId];
         if ([appleId length] > 0)
         {
-            //iOS 6.0及其以上且appleID非空时：在当前app内展示native app安装包下载界面
+            //appleID非空时：在当前app内展示native app安装包下载界面
             SKStoreProductViewController *storeController = [[SKStoreProductViewController alloc] init];
             storeController.delegate = self;
 
@@ -63,17 +63,18 @@ static XStoreProductPresenter *sStoreProductPresenterInstance;
             [storeController loadProductWithParameters:productParameters completionBlock:^(BOOL result, NSError *error) {
                 if (!result)
                 {
-                    XLogE(@"Faled to load store product with error:%@", [error localizedDescription]);
+                    ALog(@"Faled to load store product with error:%@", [error localizedDescription]);
                 }
             }];
-            id rootViewController = [[[UIApplication sharedApplication] keyWindow] rootViewController];
-            NSAssert(rootViewController, @"Root view controller should not be nil!");
-            [rootViewController presentViewController:storeController animated:YES completion:nil];
+
+            UIViewController *topVC = [XUtils topViewController];
+            NSAssert(topVC, @"Top view controller view controller should not be nil!");
+            [topVC presentViewController:storeController animated:NO completion:nil];
             return ret;
         }
     }
 
-    //iOS 6.0以下或appleID为空时：跳转到App Store或其他应用展示native app安装包下载界面
+    //appleID为空时：跳转到App Store或其他应用展示native app安装包下载界面
     NSString *remotePkg = [appInfo prefRemotePkg];
     NSAssert(([remotePkg length] > 0), @"Remote package value should not be empty for native app!");
 
