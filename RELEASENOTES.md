@@ -23,3 +23,10 @@
 # Release Notes
 ### 1.0.0 Tue Jan 07 2014 15:39:04 GMT+0800 (CST)
  *  Added releasenotes
+
+## 1.0.1 (Thu Mar 20 2014)
+
+
+ *  [iOS]Update the process of presenting store controller.
+ *  batch modify .reviewboard
+ *  Incremented plugin version on dev branch to 1.0.1-dev
